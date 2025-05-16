@@ -3,6 +3,10 @@
 ## **Overview**
 TruncalFlow is a high-throughput command-line tool for identifying truncal mutations from tumor sequencing data. Built around the [QuantumClone] (https://pmc.ncbi.nlm.nih.gov/articles/PMC5972665/) R package for clonal reconstruction, it streamlines preprocessing, formatting, clustering, and postprocessing steps into a single automated pipeline optimized for use on HPC environments.
 
+<p align="center">
+  <img src="pics/Wrapper_diagram.png" alt="Workflow diagram" width="600"/>
+</p>
+
 
 ℹ️ This tool wraps and extends QuantumClone. Please cite Deveau et al., 2018 if using this workflow in your research.
 
