@@ -14,12 +14,12 @@ TruncalFlow is a high-throughput command-line tool for identifying truncal mutat
 
 ## **Input Files**
 
-| Required | Argument       | Description                                                      |
-|----------|-------------------|------------------------------------------------------------------|
+| Required | Argument            | Description                                                      |
+|----------|---------------------|------------------------------------------------------------------|
 | ✅       | `--vcf`        | Single VCF file or directory containing one VCF per sample      |
 | ❌       | `--cnv`        | CNV file or directory (optional, but recommended)               |
 | ➕       | `--cnv_format` | Format of CNV data. Required if `--cnv` is provided. Accepted values: `battenberg` or `major_minor_format` |
-| ❌       | `--key_mutations` | List of mutation identifiers to retain regardless of filters in format CHROM POS REF ALT |
+| ❌       | `--key_mutations`   | List of mutation identifiers to retain regardless of filters in format CHROM POS REF ALT |
 
 
 - After preprocessing, from the VCF file a `*_SNVlist.txt` file is created for each sample.
