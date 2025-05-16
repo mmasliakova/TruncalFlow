@@ -115,7 +115,7 @@ The file `truncalmutations.txt` includes a table of mutations assigned to the tr
 
 | Chromosome | Position  | Depth | Alt | Cellularity | Genotype | NC | NCh | id | Sample | Cluster | MutationType |
 |------------|-----------|-----|-----|---------|-------------|----|----|-----|---------------|----|---------|
-| 3       | 16153608  | 124   | 40   | 0.645161290322581       | AB        | 1   | 2    | 240   | P3-noXY   | SNV   |
+| 3       | 16153608  | 124   | 40   | 0.645161290322581       | AB        | 1   | 2    | 240  | 1  | P3-noXY   | SNV   |
 
 - **Chromosome**: Chromosomal location of the mutation
 - **Position**: Genomic coordinate
