@@ -33,8 +33,8 @@ TruncalFlow is a high-throughput command-line tool for identifying truncal mutat
 This tool can be installed by cloning this repository:
 
 ```
-git clone https://github.com/your-username/truncalflow.git
-cd truncalflow
+git clone https://github.com/mmasliakova/TruncalFlow.git
+cd TruncalFlow
 ```
 
 ### **Dependencies**
@@ -58,8 +58,7 @@ Basic usage:
 ```
 python3 main_wrapper.py \
   --vcf /path/to/vcf(s)/ \
-  --output_dir /path/to/output/ \
-  --time 04:00:00
+  --output_dir /path/to/output/
 ```
 
 Full example with CNV and optional arguments:
@@ -74,7 +73,7 @@ python3 main_wrapper.py \
   --functional_filter missense stop_gained \
   --filtering_mode both \
   --key_mutations key_mutations.txt \
-  --time 08:00:00
+  --time 03:00:00
 ```
 
 ℹ️ For more details about the mutations clustering step, check out the [QuantumClone GitHub repository](https://github.com/DeveauP/QuantumClone).
@@ -89,7 +88,7 @@ The pipeline executor main_wrapper.py takes the following options:
 |----------------------|---------------------|--------------------------------------------------------------------------------------------------------------|
 | `--vcf`              | ✅                  | Input VCF file or folder containing one VCF per sample                                                       |
 | `--cnv`              | ❌                  | Optional CNV file or directory                                              |
-| `--cnv_format`       | ✅ if `--cnv` is set | Format of CNV data. Accepted values: `battenberg` or `major_minor`         |
+| `--cnv_format`       | ✅ if `--cnv` is set | Format of CNV data. Accepted values: `battenberg` or `major_minor_format`         |
 | `--output_dir`       | ✅                  | Directory where output results will be saved                               |
 | `--mutation_types`   | ❌                  | Filter for mutation types: snv, indel                                |
 | `--functional_filter`| ❌                  | Filter for functional consequence: comma-separated list (e.g., `missense`, `stop_gained`)   |
@@ -101,7 +100,7 @@ The pipeline executor main_wrapper.py takes the following options:
 
 ## **Output**
 
-For each sample, a folder is created under the specified `--output_dir`. Inside each folder:
+A folder is created for each sample under the specified `--output_dir`. Inside each folder:
 
 ```
 sample_X/
