@@ -34,7 +34,7 @@ This tool can be installed by cloning this repository:
 
 ```
 git clone https://github.com/mmasliakova/TruncalFlow.git
-cd TruncalFlow
+cd TruncalFlow/scripts
 ```
 
 ### **Dependencies**
@@ -45,7 +45,7 @@ TruncalFlow runs inside a containerized R environment built with Singularity (Ap
 singularity pull docker://stevelefever/thesis_2025_marina
 ```
 
-The resulting .sif file (thesis_2025_marina_latest.sif) should be placed in the same directory as main_wrapper.py.
+The resulting .sif file (thesis_2025_marina_latest.sif) should be placed in the same directory as main.py.
 
 ---
 
@@ -56,7 +56,7 @@ This tool must be run on an HPC system with PBS job scheduler support.
 Basic usage:
 
 ```
-python3 main_wrapper.py \
+python3 main.py \
   --vcf /path/to/vcf(s)/ \
   --output_dir /path/to/output/
 ```
@@ -64,7 +64,7 @@ python3 main_wrapper.py \
 Full example with CNV and optional arguments:
 
 ```
-python3 main_wrapper.py \
+python3 main.py \
   --vcf ./vcf_dir/ \
   --cnv ./cnv_dir/ \
   --cnv_format battenberg \
@@ -128,3 +128,8 @@ The file `truncalmutations.txt` includes a table of mutations assigned to the tr
 - **Sample**: Sample name
 - **Cluster**: QuantumClone cluster assignment (all mutations in the list have the same cluster ID - truncal cluster)
 - **MutationType**: Type of variant (e.g., SNV or indel)
+
+
+## **Notes**
+
+If you wish to re-run the clustering step for certain samples, where clustering was finished, you'll need to delete the clustering results for this sample first. This is done to protect against overwriting the results in case multiple samples (in one folder) are used. 
